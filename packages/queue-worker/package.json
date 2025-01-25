@@ -1,0 +1,14 @@
+{
+  "name": "@turbo-repo-starter-kit/queue-worker",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "start": "node dist/index.cjs",
+    "build": "tsup"
+  },
+  "devDependencies": {
+    "bullmq": "^5.35.1",
+    "tsup": "^8.3.5"
+  }
+}
