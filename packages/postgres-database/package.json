@@ -1,0 +1,26 @@
+{
+  "name": "@turbo-repo-starter-kit/postgres-database",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "generate": "npx drizzle-kit generate",
+    "migrate": "npx drizzle-kit migrate",
+    "push": "npx drizzle-kit push",
+    "studio": "npx drizzle-kit studio"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.11.10",
+    "dotenv": "^16.4.7",
+    "drizzle-kit": "^0.30.2",
+    "drizzle-orm": "^0.38.4",
+    "pg": "^8.13.1",
+    "tsup": "^8.3.5",
+    "tsx": "^4.7.1"
+  },
+  "dependencies": {
+    "drizzle-zod": "^0.6.1"
+  }
+}
