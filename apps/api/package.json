@@ -1,0 +1,28 @@
+{
+  "name": "api",
+  "type": "module",
+  "private": true,
+  "version": "0.0.1",
+  "main": "dist/index.cjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsup",
+    "build:watch": "tsup --watch"
+  },
+  "devDependencies": {
+    "@hono/node-server": "^1.13.7",
+    "@hono/swagger-ui": "^0.5.0",
+    "@hono/zod-openapi": "^0.18.3",
+    "@turbo-repo-starter-kit/postgres-database": "workspace:*",
+    "@types/node": "^20.11.17",
+    "bullmq": "^5.35.1",
+    "dotenv": "^16.4.7",
+    "hono": "^4.6.18",
+    "stripe": "^17.5.0",
+    "tsup": "^8.3.5",
+    "tsx": "^4.7.1",
+    "winston": "^3.17.0",
+    "zod": "^3.24.1"
+  }
+}
