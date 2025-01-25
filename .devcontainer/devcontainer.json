@@ -7,6 +7,9 @@
     },
     "ghcr.io/devcontainers/features/sshd:1": {
       "version": "lts"
+    },
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {
+      "version": "lts"
     }
   },
   "mounts": [
@@ -32,7 +35,12 @@
       ]
     }
   },
-  "forwardPorts": [3000, 5173, 5432, 6379],
+  "forwardPorts": [
+    3000,
+    5173,
+    5432,
+    6379
+  ],
   "remoteUser": "ubuntu",
   "containerEnv": {
     "NODE_ENV": "development"
