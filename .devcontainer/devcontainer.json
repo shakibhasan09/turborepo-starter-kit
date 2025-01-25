@@ -1,0 +1,40 @@
+{
+  "name": "Ubuntu Dev Container",
+  "image": "ubuntu:24.04",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "lts"
+    },
+    "ghcr.io/devcontainers/features/sshd:1": {
+      "version": "lts"
+    }
+  },
+  "mounts": [
+    "type=bind,source=${localEnv:HOME}/.ssh,target=/home/ubuntu/.ssh,readonly",
+    "type=bind,source=${localEnv:HOME}/.gitconfig,target=/home/ubuntu/.gitconfig"
+  ],
+  "postCreateCommand": "pnpm install",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "ecmel.vscode-html-css",
+        "ms-vscode.vscode-typescript-next",
+        "equinusocio.vsc-material-theme-icons",
+        "bradlc.vscode-tailwindcss",
+        "rangav.vscode-thunder-client",
+        "formulahendry.auto-rename-tag",
+        "formulahendry.auto-close-tag",
+        "heybourn.headwind",
+        "YoavBls.pretty-ts-errors",
+        "ms-vscode.remote-explorer"
+      ]
+    }
+  },
+  "forwardPorts": [3000, 5173, 5432, 6379],
+  "remoteUser": "ubuntu",
+  "containerEnv": {
+    "NODE_ENV": "development"
+  }
+}
