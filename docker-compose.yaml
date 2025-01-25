@@ -1,0 +1,20 @@
+services:
+  redis_primary:
+    image: redis:7.4
+    restart: unless-stopped
+    volumes:
+      - redis-data:/data
+
+  database_primary:
+    image: postgres:17.2
+    restart: unless-stopped
+    environment:
+      POSTGRES_PASSWORD: root
+      POSTGRES_USER: root
+      POSTGRES_DB: dropletmail
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+volumes:
+  postgres-data:
+  redis-data:
