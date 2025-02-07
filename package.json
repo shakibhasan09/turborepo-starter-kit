@@ -6,7 +6,8 @@
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "clean": "find . -type d \\( -name \"node_modules\" -o -name \"dist\" -o -name \".turbo\" \\) -exec rm -rf {} +"
   },
   "devDependencies": {
     "prettier": "^3.2.5",
